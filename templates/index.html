@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <style>
-        .data {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .data th, .data td {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        .data th {
-            background-color: #f2f2f2;
-        }
+      .data {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .data th,
+      .data td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      .data th {
+        background-color: #f2f2f2;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>CSV Data</h1>
 
     <div id="ResultList">
-        {% for row in data_list %}
-            <ul>
-                {% for key, value in row.items() %}
-                    <li>{{ key }}: {{ value }}</li>
-                {% endfor %}
-            </ul>
-        {% endfor %}
+      {% for row in data_list %}
+      <ul>
+        <li class="column-0">Column_0: {{ row['Japan'] }}</li>
+        <li class="column-3">Column_3: {{ row['US'] }}</li>
+        <li class="column-7">Column_7: {{ row['UK'] }}</li>
+        <li class="column-8">Column_8: {{ row['Canada'] }}</li>
+      </ul>
+      {% endfor %}
     </div>
-
-</body>
+  </body>
 </html>
