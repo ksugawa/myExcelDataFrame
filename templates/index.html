@@ -19,12 +19,15 @@
 </head>
 <body>
 
-<h1>CSV Data</h1>
+    <h1>CSV Data</h1>
 
-{% for table in tables %}
-    <h2>{{ titles[loop.index0] }}</h2>
-    {{ table|safe }}
-{% endfor %}
+    {% for row in data_list %}
+        <ul>
+            {% for key, value in row.items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
 
 </body>
 </html>

@@ -19,7 +19,8 @@ def load_csv_data():
 @app.route('/', methods=("POST", "GET"))
 def index():
     df_data = load_csv_data()
-    return render_template('index.html', tables=[df_data.to_html(classes='data')], titles=df_data.columns.values)
+    data_list = df_data.to_dict(orient='records')
+    return render_template('index.html', data_list=data_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
