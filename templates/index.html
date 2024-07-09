@@ -21,13 +21,15 @@
 
     <h1>CSV Data</h1>
 
-    {% for row in data_list %}
-        <ul>
-            {% for key, value in row.items() %}
-                <li>{{ key }}: {{ value }}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+    <div id="ResultList">
+        {% for row in data_list %}
+            <ul>
+                {% for key, value in row.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
 
 </body>
 </html>

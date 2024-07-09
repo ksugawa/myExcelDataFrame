@@ -10,7 +10,7 @@ def load_csv_data():
     start = time.time()
     # 列指定usecols
     # データタイプ文字列指定 dtype=str
-    df = pd.read_csv(url, header=0, usecols=[0, 3, 7, 8], dtype=str, na_values='-')
+    df = pd.read_csv(url, header=0, usecols=[0, 3, 7, 8], names=["Japan","US","UK", "Canada"], dtype=str, na_values='-')
     end = time.time()
     print("CSVの読み込み時間:", end - start)
     print(df)
